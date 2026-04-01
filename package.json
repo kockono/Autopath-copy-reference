@@ -1,0 +1,43 @@
+{
+  "name": "autopath-copy-reference",
+  "displayName": "AutoPath Copy Reference",
+  "description": "Minimal VS Code extension to copy workspace-relative line references for Warp handoff.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "private": true,
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:autopath.copyReference",
+    "onCommand:autopath.copyReferenceWithCode"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autopath.copyReference",
+        "title": "AutoPath: Copy Reference"
+      },
+      {
+        "command": "autopath.copyReferenceWithCode",
+        "title": "AutoPath: Copy Reference With Code"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "autopath.copyReference",
+        "key": "ctrl+alt+shift+g",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "autopath.copyReferenceWithCode",
+        "key": "ctrl+alt+shift+c",
+        "when": "editorTextFocus"
+      }
+    ]
+  }
+}
